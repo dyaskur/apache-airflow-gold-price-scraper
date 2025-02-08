@@ -30,7 +30,7 @@ def transform_data():
 
 # Function to load data into PostgreSQL
 def load_data():
-    hook = PostgresHook(postgres_conn_id="postgres_default")
+    hook = PostgresHook(postgres_conn_id="postgres_warehouse")
     with open("/tmp/completed_todos.json", "r") as f:
         completed_todos = json.load(f)
     for todo in completed_todos:
