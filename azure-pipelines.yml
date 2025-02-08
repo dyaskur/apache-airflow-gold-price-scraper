@@ -1,6 +1,5 @@
 trigger:
-  branches:
-    - main  # Trigger on main branch changes
+  branches: main  # Trigger on main branch changes
 
 pool:
   vmImage: "ubuntu-latest"
