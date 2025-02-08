@@ -21,6 +21,8 @@ services:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=${AIRFLOW_DB_URL}
     env_file:
       - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
     ports:
       - "8080:8080"
     command: webserver
@@ -36,4 +38,6 @@ services:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=${AIRFLOW_DB_URL}
     env_file:
       - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
     command: scheduler
